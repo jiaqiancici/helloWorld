@@ -1,0 +1,84 @@
+<html>
+<head>
+    <title>后台菜单</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <base target="main"><!--用于框架-->
+    <style type="text/css">
+        .meauLeft{
+            margin-top:30px;
+            margin-left: 20px;
+            width: 300px;
+        }
+        h1{
+            color: #3ea591;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        .hidden{
+            display: none;
+        }
+        li{
+            list-style-type: none;
+            font-size: 20px;
+        }
+        a:hover{
+            color: #3ea591;
+        }
+        .li0{
+            background-color:#e1f3f1;
+            margin: 10px 10px 30px 10px;
+            width: 160px;
+            padding-left: 10px;
+            line-height: 30px;
+        }
+        .li0 ul li{
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+<div class="meauLeft">
+    <h1>菜单栏</h1>
+    <ul>
+        <li class="li0" onclick="showsubmenu(0)"> <a >功能管理中心</a>
+            <ul class="hidden" id="subMeau1">
+                <li><a href="addClothInfo.jsp">服饰信息添加</a></li>
+                <li><a >服饰信息删除</a></li>
+                <li><a >服饰信息修改</a></li>
+                <li><a >明星添加</a></li>
+            </ul>
+        </li>
+        <li class="li0" onclick="showsubmenu(1)"><a href="#">业务中心</a>
+            <ul class="hidden" id="subMeau2">
+                <li><a >用户资料修改</a></li>
+                <li><a >用户添加</a></li>
+                <li><a href="#">公司信息管理</a></li>
+                <li><a href="#">其他业务</a></li>
+            </ul>
+        </li>
+        <li class="li0" onclick="showsubmenu(2)"><a href="#"> 安全管理</a>
+            <ul class="hidden" id="subMeau3">
+                <li><a href="#">网站维护</a></li>
+                <li><a href="#">企业安全</a></li>
+                <li><a href="#">数据更新</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+
+</body>
+</html>
+<script>
+function showsubmenu(num)
+{
+ var bbMeau=document.getElementsByClassName("hidden")[num];
+if (bbMeau.style.display === "none")
+{bbMeau.style.display="block";}
+else
+{bbMeau.style.display="none";}
+}
+</script>
